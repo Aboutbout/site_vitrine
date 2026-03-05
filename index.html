@@ -3,64 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Étudiants BTS SIO SLAM</title>
+    <title>Tech & Code | Agence de Développement</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <nav>
-            <ul>
-                <li><a href="#accueil">Accueil</a></li>
-                <li><a href="#profils">Nos Profils</a></li>
-                <li><a href="#competences">Compétences</a></li>
-                <li><a href="#projets">Projets</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="container header-content">
+            <div class="logo">Tech <span>&</span> Code</div>
+            <nav>
+                <ul>
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#services">Expertises</a></li>
+                    <li><a href="#a-propos">L'Agence</a></li>
+                    <li><a href="#contact" class="btn-nav">Nous contacter</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <section id="accueil">
-        <h1>Bienvenue sur notre Portfolio</h1>
-        <p>Nous sommes deux étudiants passionnés en BTS SIO option SLAM (Développement Logiciel).</p>
-    </section>
-
-    <section id="profils" class="container">
-        <div class="profil">
-            <h2>[Prénom Nom 1]</h2>
-            <p>Étudiant en 1ère/2ème année. Passionné par le développement Back-end (PHP, Java).</p>
-            <a href="lien-vers-cv1.pdf" class="btn">Télécharger mon CV</a>
-        </div>
-        <div class="profil">
-            <h2>[Prénom Nom 2]</h2>
-            <p>Étudiant en 1ère/2ème année. Orienté développement Front-end et mobile.</p>
-            <a href="lien-vers-cv2.pdf" class="btn">Télécharger mon CV</a>
+    <section id="accueil" class="hero">
+        <div class="container">
+            <h1>Donnez vie à vos projets digitaux</h1>
+            <p>Nous concevons des solutions logicielles sur mesure, des applications web et mobiles performantes pour propulser votre entreprise.</p>
+            <a href="#services" class="btn btn-primary">Découvrir nos services</a>
         </div>
     </section>
 
-    <section id="competences">
-        <h2>Nos Compétences SLAM</h2>
-        <ul>
-            <li><strong>Langages :</strong> HTML, CSS, JavaScript, PHP, C#, Java</li>
-            <li><strong>Bases de données :</strong> MySQL, PostgreSQL</li>
-            <li><strong>Outils :</strong> Git, GitHub, VS Code</li>
-        </ul>
+    <section id="services" class="section-claire">
+        <div class="container">
+            <h2>Nos Expertises Techniques</h2>
+            <div class="grid-services">
+                <div class="service-carte">
+                    <h3>💻 Développement Logiciel</h3>
+                    <p>Création d'applications métier sur mesure (C#, Java) pour optimiser vos processus internes et votre gestion de données.</p>
+                </div>
+                <div class="service-carte">
+                    <h3>🌐 Solutions Web</h3>
+                    <p>Développement de sites vitrines et plateformes e-commerce dynamiques (PHP, JavaScript, architectures MVC).</p>
+                </div>
+                <div class="service-carte">
+                    <h3>📱 Applications Mobiles</h3>
+                    <p>Conception d'applications fluides et intuitives pour iOS et Android afin de rester connecté avec vos utilisateurs.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="projets">
-        <h2>Nos Projets Récents</h2>
-        <div class="projet-carte">
-            <h3>Application de Gestion (PPE)</h3>
-            <p>Développement d'une application client-lourd en C# pour la gestion des employés.</p>
-        </div>
-        <div class="projet-carte">
-            <h3>Site Web Dynamique</h3>
-            <p>Création d'un site e-commerce en PHP/MySQL avec architecture MVC.</p>
+    <section id="a-propos" class="section-sombre">
+        <div class="container">
+            <h2>Pourquoi choisir Tech & Code ?</h2>
+            <p class="intro-propos">Fondée par deux développeurs passionnés, notre agence allie innovation technologique et rigueur algorithmique.</p>
+            <div class="valeurs">
+                <ul>
+                    <li><strong>Code propre et maintenable :</strong> Respect des normes de développement et de sécurité.</li>
+                    <li><strong>Accompagnement sur mesure :</strong> De l'analyse du cahier des charges à la mise en production.</li>
+                    <li><strong>Maîtrise des bases de données :</strong> Architectures robustes sous MySQL et PostgreSQL.</li>
+                </ul>
+            </div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 - Portfolio créé par [Nom 1] & [Nom 2] - Étudiants BTS SIO.</p>
+        <div class="container">
+            <p>&copy; 2026 Tech & Code - Tous droits réservés.</p>
+            <p>Agence experte en solutions SLAM (Solutions Logicielles et Applications Métier).</p>
+        </div>
     </footer>
 
 </body>

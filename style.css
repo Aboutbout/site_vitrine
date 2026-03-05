@@ -1,73 +1,189 @@
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
+/* Variables de couleurs pour un look "Tech" */
+:root {
+    --couleur-principale: #0f172a; /* Bleu nuit très foncé */
+    --couleur-accent: #3b82f6; /* Bleu tech vif */
+    --couleur-texte: #334155;
+    --couleur-fond: #f8fafc;
+    --blanc: #ffffff;
 }
 
+/* Reset de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: var(--couleur-texte);
+    background-color: var(--couleur-fond);
+    line-height: 1.6;
+}
+
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* --- Header & Navigation --- */
 header {
-    background: #2c3e50;
-    color: #fff;
+    background-color: var(--blanc);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 1rem 0;
-    text-align: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--couleur-principale);
+}
+
+.logo span {
+    color: var(--couleur-accent);
 }
 
 nav ul {
     list-style: none;
-    padding: 0;
+    display: flex;
+    align-items: center;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 15px;
+    margin-left: 20px;
 }
 
 nav ul li a {
-    color: #fff;
     text-decoration: none;
-    font-weight: bold;
+    color: var(--couleur-principale);
+    font-weight: 500;
+    transition: color 0.3s;
 }
 
-section {
-    padding: 2rem;
+nav ul li a:hover {
+    color: var(--couleur-accent);
+}
+
+.btn-nav {
+    border: 2px solid var(--couleur-accent);
+    padding: 8px 15px;
+    border-radius: 5px;
+    color: var(--couleur-accent) !important;
+}
+
+.btn-nav:hover {
+    background-color: var(--couleur-accent);
+    color: var(--blanc) !important;
+}
+
+/* --- Hero Section --- */
+.hero {
+    background-color: var(--couleur-principale);
+    color: var(--blanc);
     text-align: center;
+    padding: 6rem 0;
 }
 
-.container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
 }
 
-.profil, .projet-carte {
-    background: #fff;
-    padding: 1.5rem;
-    margin: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    width: 40%;
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #cbd5e1;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background: #3498db;
-    color: #fff;
+.btn-primary {
+    background-color: var(--couleur-accent);
+    color: var(--blanc);
+    padding: 12px 25px;
     text-decoration: none;
     border-radius: 5px;
-    margin-top: 10px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: background 0.3s;
 }
 
-.btn:hover {
-    background: #2980b9;
+.btn-primary:hover {
+    background-color: #2563eb;
 }
 
-footer {
-    background: #2c3e50;
-    color: #fff;
+/* --- Sections --- */
+.section-claire {
+    padding: 5rem 0;
+    background-color: var(--couleur-fond);
+}
+
+.section-sombre {
+    padding: 5rem 0;
+    background-color: var(--blanc);
+}
+
+h2 {
     text-align: center;
-    padding: 1rem 0;
-    margin-top: 2rem;
+    font-size: 2.2rem;
+    color: var(--couleur-principale);
+    margin-bottom: 3rem;
+}
+
+/* --- Grid Services --- */
+.grid-services {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.service-carte {
+    background: var(--blanc);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    flex: 1;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.service-carte:hover {
+    transform: translateY(-5px);
+}
+
+.service-carte h3 {
+    color: var(--couleur-principale);
+    margin-bottom: 1rem;
+}
+
+/* --- À Propos --- */
+.intro-propos {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.valeurs ul {
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 2;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--couleur-principale);
+    color: #cbd5e1;
+    text-align: center;
+    padding: 2rem 0;
 }
